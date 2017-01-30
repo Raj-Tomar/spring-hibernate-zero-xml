@@ -19,9 +19,6 @@ import org.springframework.web.servlet.config.annotation.DefaultServletHandlerCo
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
-import com.raj.swagger.config.Swagger2Config;
-import com.raj.swagger.config.WebAppConfig;
-
 @EnableWebMvc
 @Configuration
 @ComponentScan(basePackages = { "com.raj.beans","com.raj.controller","com.raj.service", 
@@ -37,19 +34,6 @@ public class AppConfig extends WebMvcConfigurerAdapter {
     public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
         configurer.enable();
     }
- 
-    @Bean
-    public Swagger2Config swaggerConfig(){
-    	Swagger2Config swagger = new Swagger2Config();
-    	return swagger;
-    }
-    
-    @Bean
-    public WebAppConfig webAppConfig(){
-    	WebAppConfig webConfig = new WebAppConfig();
-    	return webConfig;
-    }
-    
     
     /*
     
